@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>One - Patrick's Kartenspiel</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="icon-transparent-bg.png" />
+  </head>
+  <body>
+    <div class="screen" id="startscreen">
+      <div class="logo">
+        <img src="icon-transparent-bg.png" alt="" />
+      </div>
+
+      <button id="startGame">Jetzt spielen</button>
+    </div>
+
+    <div class="screen" id="playercountscreen" style="display: none">
+      <h1>Spielerzahl</h1>
+
+      <div class="setplayercount">
+        <button id="minusBtn">&minus;</button>
+        <input id="playercount" type="number" value="2" readonly />
+        <button id="plusBtn">&plus;</button>
+      </div>
+
+      <button id="startGameBtn">Spiel starten</button>
+    </div>
+
+    <div class="screen" id="gamescreen" style="display: none">
+      <h2 id="currentPlayer">Spieler 1</h2>
+      <div id="topCard">Startkarte</div>
+      <div id="cardArea"></div>
+      <button id="showCards">Karten anzeigen</button>
+      <button id="drawCard">Karte ziehen</button>
+
+      <!-- <button id="nextPlayer">Weitergeben</button> -->
+    </div>
+
+    <button id="fullscreen">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <polyline points="8 3 3 3 3 8" />
+        <polyline points="16 3 21 3 21 8" />
+        <polyline points="8 21 3 21 3 16" />
+        <polyline points="16 21 21 21 21 16" />
+      </svg>
+    </button>
+
+    <div id="winnerPopup">
+      <h1 id="winnerText">Spieler 1 hat gewonnen 🎉</h1>
+      <button id="restartGame">Neue Runde</button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
