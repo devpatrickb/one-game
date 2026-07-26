@@ -89,6 +89,18 @@ function createDeck() {
     for (let i = 0; i <= 9; i++) {
       deck.push(`${color} ${i}`);
     }
+    for (let i = 0; i <= 9; i++) {
+      deck.push(`${color} ${i}`);
+    }
+    for (let i = 0; i <= 9; i++) {
+      deck.push(`${color} ${i}`);
+    }
+    for (let i = 0; i <= 9; i++) {
+      deck.push(`${color} ${i}`);
+    }
+    for (let i = 0; i <= 9; i++) {
+      deck.push(`${color} ${i}`);
+    }
   });
 }
 
@@ -96,11 +108,9 @@ function shuffle(array) {
   return array.sort(() => Math.random() - 0.5);
 }
 
-// i < 1 zurück auf i < 7
-
 function dealCards() {
   players.forEach((player) => {
-    for (let i = 0; i < 1; i++) {
+    for (let i = 0; i < 7; i++) {
       player.cards.push(deck.pop());
     }
   });
